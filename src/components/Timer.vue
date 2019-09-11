@@ -1,16 +1,19 @@
 <template>
     <div id="timer">
+      <div class="level"> 
         <div class="block">
-          <p id="minutes">{{ minutes }}</p>
           <p class="text">minutes</p>
+          <p id="minutes">{{ minutes }}</p>
+          
         </div>
-
-        <div class="block">
+        <div class="block" style="color: #9834eb;">
+          <p class="text" >seconds</p>
           <span id="seconds">{{ seconds }}</span>
-          <p class="text">seconds</p>
+          
         </div>
-
-        <TimerControls
+      </div>
+      
+      <TimerControls
         v-on:start-timer="startTimer"
         v-on:stop-timer="stopTimer"
         v-on:reset-timer="resetTimer"
@@ -18,7 +21,7 @@
         v-bind:timer="timer"
         v-bind:resetButton="resetButton"/>
 
-        <EditForm v-bind:edit="edit" v-on:set-time="setTime"/>
+      <EditForm v-bind:edit="edit" v-on:set-time="setTime"/>
     </div>
 </template>
 
@@ -99,14 +102,16 @@ export default {
   font-size: 200px;
   font-family: 'Roboto', serif;
   line-height: 1;
-  margin-bottom: 40px;
+  position: auto;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  max-height: 100%;
 }
 
 .block {
     display: flex;
-    flex-direction: column;
-    margin: 20px;
-}
+    flex-direction: column-reverse;
+    margin: 20px;}
 
 .text {
     color: #ffffff;
