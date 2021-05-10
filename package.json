@@ -12,7 +12,7 @@
     "bulma": "^0.7.5",
     "core-js": "^2.6.5",
     "feather-icons": "^4.24.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "vue": "^2.6.10",
     "vue-feather-icons": "^5.0.0"
   },
